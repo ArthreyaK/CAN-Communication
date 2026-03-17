@@ -1,0 +1,187 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: IT6000 PC
+VAL_TABLE_ CS 47 "write 1 bytes" 43 "write 2 bytes" 39 "write 3 bytes" 35 "write 4 bytes" ;
+VAL_TABLE_ LOAD_MODE 7 "VCWR" 6 "CCCR" 5 "CVCR" 4 "CVCC" 3 "CR" 2 "CP" 1 "CV" 0 "CC" ;
+VAL_TABLE_ LOAD_MODE 3 "CR" 2 "CP" 1 "CV" 0 "CC" ;
+VAL_TABLE_ DC_MODE 1 "CC" 0 "CV" ;
+VAL_TABLE_ SDO_SCS 4 "Abort SDO Transfer" 3 "Initiare SDO Download" 2 "Initiate SDO Upload" 1 "Download SDO" 0 "Upload SDO" ;
+VAL_TABLE_ SDO_CCS 4 "Abort SDO Transfer" 3 "Upload SDO" 2 "Initiate SDO Upload" 1 "Initiate SDO Download" 0 "Download SDO" ;
+VAL_TABLE_ ON_OFF 1 "ON" 0 "OFF" ;
+VAL_TABLE_ RUN_MODEL 3 "CP" 2 "CR" 1 "CV" 0 "CC" ;
+VAL_TABLE_ NMT_Error_Status 127 "Pre-operational" 5 "Operational" 4 "Stopped" 0 "Boot-up" ;
+VAL_TABLE_ NMT_Module_CS 130 "Reset Communication" 129 "Reset Node" 128 "Enter Pre-operational State" 2 "Stop Remote Node" 1 "Start Remote Node" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ SDO_SCS : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Meter_p_low : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "W" Vector__XXX
+ SG_ SDO_Toggle : 0|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ SDO_Number : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SDO_Expedited : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SDO_Size_Indicator : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SDO_Data : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ SDO_SubIndex : 0|8@1- (1,0) [0|255] "" Vector__XXX
+ SG_ SDO_Index : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Serve_CS : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ SDO_Data : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ SDO_SubIndex : 0|8@1- (1,0) [0|255] "" Vector__XXX
+ SG_ SDO_Index : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ SDO_CCS : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ SDO_Toggle : 0|1@1- (1,0) [0|1] "" Vector__XXX
+ SG_ SDO_Number : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SDO_Expedited : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SDO_Size_Indicator : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1653 SDO_Server: 8 PC
+ SG_ SDO_Server_Remote m221250083 : 32|32@1+ (1,0) [0|1] ""  IT6000
+ SG_ SDO_Server_DC_Deviece_Mode m238027299 : 32|32@1+ (1,0) [0|1] ""  IT6000
+ SG_ SDO_Server_DC_Output_Resistance m305136419 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "次"  IT6000
+ SG_ SDO_Server_OnOff m70255139 : 32|32@1+ (1,0) [0|1] ""  IT6000
+ SG_ SDO_Server_DC_Voltage_Speed m221250339 : 32|32@1+ (1,0) [0|1] ""  IT6000
+ SG_ SDO_Server_DC_Voltage_Fall m70255395 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  IT6000
+ SG_ SDO_Server_DC_Voltage_Rise m53478179 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  IT6000
+ SG_ SDO_Server_DC_Voltage_Low m154141475 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  IT6000
+ SG_ SDO_Server_DC_Voltage_High m137364259 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  IT6000
+ SG_ SDO_Server_DC_Voltage m36700963 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  IT6000
+ SG_ SDO_Server_DC_Sink_Resistance m288359203 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "次"  IT6000
+ SG_ SDO_Server_DC_Sink_Res_State m271581987 : 32|32@1+ (1,0) [0|1] ""  IT6000
+ SG_ SDO_Server_DC_Power_Low m254804771 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "kW"  IT6000
+ SG_ SDO_Server_DC_Power_High m238027555 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "kW"  IT6000
+ SG_ SDO_Server_DC_Current_Speed m204473123 : 32|32@1+ (1,0) [0|1] ""  IT6000
+ SG_ SDO_Server_DC_Current_Rise m103809827 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  IT6000
+ SG_ SDO_Server_DC_Current_Low m187695907 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  IT6000
+ SG_ SDO_Server_DC_Current_High m170918691 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  IT6000
+ SG_ SDO_Server_DC_Current_Fall m120587043 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  IT6000
+ SG_ SDO_Server_DC_Current m87032611 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  IT6000
+ SG_ SDO_Server_DC_Mode m19923747 : 32|32@1+ (1,0) [0|1] ""  IT6000
+ SG_ SDO_Server_Mux M : 0|32@1+ (1,0) [0|4294967295] ""  IT6000
+
+BO_ 1525 SDO_Client: 8 IT6000
+ SG_ SDO_Client_Remote m221250115 : 32|32@1+ (1,0) [0|1] ""  PC
+ SG_ SDO_Client_DC_Device_Mode m238027331 : 32|32@1+ (1,0) [0|1] ""  PC
+ SG_ SDO_Client_DC_Output_Resistance m305136451 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "次"  PC
+ SG_ SDO_Client_OnOff m70255171 : 32|32@1+ (1,0) [0|1] ""  PC
+ SG_ SDO_Client_DC_Voltage_Speed m221250371 : 32|32@1+ (1,0) [0|1] ""  PC
+ SG_ SDO_Client_DC_Voltage_Rise m53478211 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  PC
+ SG_ SDO_Client_DC_Voltage_Low m154141507 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  PC
+ SG_ SDO_Client_DC_Voltage_High m137364291 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  PC
+ SG_ SDO_Client_DC_Voltage_Fall m70255427 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  PC
+ SG_ SDO_Client_DC_Voltage m36700995 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  PC
+ SG_ SDO_Client_DC_Sink_Resistance m288359235 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "次"  PC
+ SG_ SDO_Client_DC_Sink_Res_State m271582019 : 32|32@1+ (1,0) [0|1] ""  PC
+ SG_ SDO_Client_DC_Power_Low m254804803 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "kW"  PC
+ SG_ SDO_Client_DC_Power_High m238027587 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "kW"  PC
+ SG_ SDO_Client_DC_Current_Speed m204473155 : 32|32@1+ (1,0) [0|1] ""  PC
+ SG_ SDO_Client_DC_Current_Rise m103809859 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  PC
+ SG_ SDO_Client_DC_Current_Low m187695939 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  PC
+ SG_ SDO_Client_DC_Current_High m170918723 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  PC
+ SG_ SDO_Client_DC_Current_Fall m120587075 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "s"  PC
+ SG_ SDO_Client_DC_Current m87032643 : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  PC
+ SG_ SDO_Client_DC_Mode m19923779 : 32|32@1+ (1,0) [0|1] ""  PC
+ SG_ SDO_Client_Mux M : 0|32@1+ (1,0) [0|4294967295] ""  PC
+
+BO_ 0 NMT_Module_Control: 2 PC
+ SG_ NMT_ID : 8|8@1+ (1,0) [0|255] ""  IT6000
+ SG_ NMT_CS : 0|8@1+ (1,0) [0|255] ""  IT6000
+
+BO_ 1397 RPDO_4: 8 PC
+ SG_ load_resistance : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "次"  IT6000
+ SG_ load_power : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "W"  IT6000
+
+BO_ 1269 TPDO_4: 4 IT6000
+ SG_ Bemulator_AH : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "AH"  PC
+
+BO_ 1141 RPDO_3: 8 PC
+ SG_ load_current : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  IT6000
+ SG_ load_voltage : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  IT6000
+
+BO_ 1013 TPDO_3: 8 IT6000
+ SG_ Bemulator_soc : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "%"  PC
+ SG_ Question_condition : 0|32@1+ (1,0) [0|4294967295] ""  PC
+
+BO_ 885 RPDO_2: 8 PC
+ SG_ load_mode : 32|32@1+ (1,0) [0|7] ""  IT6000
+ SG_ dc_current : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  IT6000
+
+BO_ 757 TPDO_2: 8 IT6000
+ SG_ Stand_event_and_oper_condition : 32|32@1+ (1,0) [0|4294967295] ""  PC
+ SG_ Meter_power : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "W"  PC
+
+BO_ 629 RPDO_1: 8 PC
+ SG_ dc_voltage : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  IT6000
+ SG_ dc_mode : 0|32@1+ (1,0) [0|1] ""  IT6000
+
+BO_ 501 TPDO_1: 8 IT6000
+ SG_ Meter_curr : 32|32@1- (0.001,0) [-2147483.648|2147483.647] "A"  PC
+ SG_ Meter_volt : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "V"  PC
+
+BO_ 1909 NMT_Error_Control: 1 IT6000
+ SG_ Status : 0|8@1+ (1,0) [0|255] ""  PC
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 3221225472 SDO_SCS 4 "Abort SDO Transfer" 3 "Initiare SDO Download" 2 "Initiate SDO Upload" 1 "Download SDO" 0 "Upload SDO" ;
+VAL_ 3221225472 Serve_CS 47 "write 1 bytes" 43 "write 2 bytes" 39 "write 3 bytes" 35 "write 4 bytes" ;
+VAL_ 3221225472 SDO_CCS 4 "Abort SDO Transfer" 3 "Upload SDO" 2 "Initiate SDO Upload" 1 "Initiate SDO Download" 0 "Download SDO" ;
+VAL_ 1653 SDO_Server_Remote 1 "On" 0 "Off" ;
+VAL_ 1653 SDO_Server_DC_Deviece_Mode 1 "Source" 0 "Load" ;
+VAL_ 1653 SDO_Server_OnOff 1 "On" 0 "Off" ;
+VAL_ 1653 SDO_Server_DC_Voltage_Speed 1 "LOW" 0 "HIGH" ;
+VAL_ 1653 SDO_Server_DC_Sink_Res_State 1 "Sink ON" 0 "Sink OFF" ;
+VAL_ 1653 SDO_Server_DC_Current_Speed 1 "LOW" 0 "HIGH" ;
+VAL_ 1653 SDO_Server_DC_Mode 1 "CC" 0 "CV" ;
+VAL_ 1653 SDO_Server_Mux 221250115 "Get Remote Status" 221250083 "Set Remote Status" 238027331 "Get Device Mode" 238027299 "Set Device Mode" 305136451 "Get Output Resistance" 305136419 "Set Output Resistance" 70255171 "Get Onoff" 70255139 "Set OnOff" 288359235 "Get Sink Resistance" 288359203 "Set Sink Resistance" 271582019 "Get Sink State" 271581987 "Set Sink State" 254804803 "Get Power Low" 254804771 "Set Power Low" 238027587 "Get Power High" 238027555 "Set Power High" 221250371 "Get CV Speed" 221250339 "Set CV Speed" 204473155 "Get CC Speed" 204473123 "Set CC Speed" 187695939 "Get Current Low" 187695907 "Set Current Low" 170918723 "Get Current High" 170918691 "Set Current High" 154141507 "Get Voltage Low" 154141475 "Set Voltage Low" 137364291 "Get Voltage High" 137364259 "Set Voltage High" 120587075 "Get Current Fall" 120587043 "Set Current Fall" 103809859 "Get Current Rise" 103809827 "Set Current Rise" 87032643 "Get DC Current" 87032611 "Set DC Current" 70255427 "Get Voltage Fall" 70255395 "Set Voltage Fall" 53478211 "Get Voltage Rise" 53478179 "Set Voltage Rise" 36700995 "Get DC Voltage" 36700963 "Set DC Voltage" 19923779 "Get DC Mode" 19923747 "Set DC Mode" ;
+VAL_ 1525 SDO_Client_Remote 1 "On" 0 "Off" ;
+VAL_ 1525 SDO_Client_DC_Device_Mode 1 "Source" 0 "Load" ;
+VAL_ 1525 SDO_Client_OnOff 1 "On" 0 "Off" ;
+VAL_ 1525 SDO_Client_DC_Voltage_Speed 1 "LOW" 0 "HIGH" ;
+VAL_ 1525 SDO_Client_DC_Sink_Res_State 1 "Sink ON" 0 "Sink OFF" ;
+VAL_ 1525 SDO_Client_DC_Current_Speed 1 "LOW" 0 "HIGH" ;
+VAL_ 1525 SDO_Client_DC_Mode 1 "CC" 0 "CV" ;
+VAL_ 1525 SDO_Client_Mux 238027331 "Get Deviece Mode" 238027299 "Set Device Mode" 305136451 "Get Output Resistance" 305136419 "Set Output Resistance" 70255171 "Get OnOff" 70255139 "Set OnOff" 288359235 "Get Sink Resistance" 288359203 "Set Sink Resistance" 271582019 "Get Sink State" 271581987 "Set Sink State" 254804803 "Get Power Low" 254804771 "Set Power Low" 238027587 "Get Power High" 238027555 "Set Power High" 221250371 "Get CV Speed" 221250339 "Set CV Speed" 204473155 "Get CC Speed" 204473123 "Set CC Speed" 187695939 "Get Current Low" 187695907 "Set Current Low" 170918723 "Get Current High" 170918691 "Set Current High" 154141507 "Get Voltage Low" 154141475 "Set Voltage Low" 137364291 "Get Voltage High" 137364259 "Set Voltage High" 120587075 "Get Current Fall" 120587043 "Set Current Fall" 103809859 "Get Current Rise" 103809827 "Set Current Rise" 87032643 "Get DC Current" 87032611 "Set DC Current" 70255427 "Get Voltage Fall" 70255395 "Set Voltage Fall" 53478211 "Get Voltage Rise" 53478179 "Set Voltage Rise" 36700995 "Get DC Voltage" 36700963 "Set DC Voltage" 19923779 "Get DC Mode" 19923747 "Set DC Mode" ;
+VAL_ 0 NMT_CS 130 "Reset Communication" 129 "Reset Node" 128 "Enter Pre-operational State" 2 "Stop Remote Node" 1 "Start Remote Node" ;
+VAL_ 885 load_mode 7 "VCWR" 6 "CCCR" 5 "CVCR" 4 "CVCC" 3 "CR" 2 "CP" 1 "CV" 0 "CC" ;
+VAL_ 629 dc_mode 1 "CC" 0 "CV" ;
+VAL_ 1909 Status 127 "Pre-operational" 5 "Operational" 4 "Stopped" 0 "Boot-up" ;
+SIG_GROUP_ 1653 Sys_Run_State 1 : SDO_Server_DC_Deviece_Mode SDO_Server_OnOff;
+SIG_GROUP_ 1653 DC_Source 1 : SDO_Server_DC_Output_Resistance SDO_Server_DC_Current SDO_Server_DC_Current_Fall SDO_Server_DC_Current_High SDO_Server_DC_Current_Low SDO_Server_DC_Current_Rise SDO_Server_DC_Voltage SDO_Server_DC_Sink_Resistance SDO_Server_DC_Current_Speed SDO_Server_DC_Sink_Res_State SDO_Server_DC_Power_Low SDO_Server_DC_Power_High SDO_Server_DC_Voltage_High SDO_Server_DC_Voltage_Low SDO_Server_DC_Voltage_Rise SDO_Server_DC_Voltage_Fall SDO_Server_DC_Voltage_Speed SDO_Server_DC_Mode;
+SIG_GROUP_ 1525 Sys_Run_State 1 : SDO_Client_Remote SDO_Client_DC_Device_Mode SDO_Client_OnOff;
+SIG_GROUP_ 1525 DC_Source 1 : SDO_Client_DC_Output_Resistance SDO_Client_DC_Sink_Resistance SDO_Client_DC_Sink_Res_State SDO_Client_DC_Power_Low SDO_Client_DC_Power_High SDO_Client_DC_Voltage_Speed SDO_Client_DC_Current_Speed SDO_Client_DC_Current_Low SDO_Client_DC_Current_High SDO_Client_DC_Voltage_Low SDO_Client_DC_Voltage_High SDO_Client_DC_Current_Fall SDO_Client_DC_Current_Rise SDO_Client_DC_Current SDO_Client_DC_Voltage_Fall SDO_Client_DC_Voltage_Rise SDO_Client_DC_Voltage SDO_Client_DC_Mode;
+
